@@ -1,0 +1,20 @@
+{
+  "title": {
+    "complete": "evidence paradoxes",
+    "first": "la preuve",
+    "second": "à l'épreuve"
+  },
+  "hero": "Comment se saisir des amats de connaissances et les faire vivre en démocratie ?",
+
+  "ideas": {
+    "title": "idées",
+    "subtitle": "quelques notes sur les défis et les paradoxes des décisions basées sur les preuves en démocratie."
+  },
+
+  "experiments": {
+    "title": "expérimentations",
+    "subtitle": "quelques outils et méthodes développés comme tentatives de solution (partielle) à certains défis présentés sur ce blog."
+  },
+
+  "about": { "title": "à propos", "subtitle": "" }
+}
