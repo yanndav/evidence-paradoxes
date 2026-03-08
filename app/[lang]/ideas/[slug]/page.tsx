@@ -1,6 +1,8 @@
-import { compileMDX } from "next-mdx-remote/rsc";
-import { getArticle } from "@/lib/mdx/getArticle";
 import MainWrapper from "@/components/pages/MainWrapper";
+import PostWrapper from "@/components/ideas/PostWrapper";
+import { getDictionary } from "@/lib/i18n/dictionaries";
+import Sections from "@/components/ideas/Sections";
+import styles from "./idea.module.css";
 
 export default async function IdeaPage({
   params,
@@ -9,15 +11,19 @@ export default async function IdeaPage({
 }) {
   const { lang, slug } = await params;
 
-  const source = await getArticle("ideas", slug, lang);
+  const dict = await getDictionary(lang);
 
-  const { content } = await compileMDX({
-    source,
-  });
+  const article = await import(`@/content/ideas/${slug}/${lang}.mdx`);
+  const metadata = article.metadata;
+  const Post = article.default;
 
+  console.log(metadata);
   return (
-    <MainWrapper>
-      <article>{content}</article>
+    <MainWrapper dict={dict} active={"ideas"}>
+      <Sections metadata={metadata} />
+      <PostWrapper>
+        <Post />
+      </PostWrapper>
     </MainWrapper>
   );
 }

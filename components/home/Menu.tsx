@@ -1,10 +1,23 @@
 "use client";
 
 import styles from "@/app/[lang]/home.module.css";
-
-export default function Menu({ dict, active }) {
+export default function Menu({ dict, active, homepage }) {
+  const links = {
+    ideas: {
+      true: `#${dict.ideas.title}`,
+      false: `/${dict.lang}/ideas`,
+    },
+    experiments: {
+      true: `#${dict.experiments.title}`,
+      false: `/${dict.lang}/experiments`,
+    },
+    about: {
+      true: `#${dict.about.title}`,
+      false: `/${dict.lang}/about`,
+    },
+  };
   return (
-    <div className={styles.navbar}>
+    <div className={`${styles.navbar} ${!homepage && styles.navmain}`}>
       <div className={styles.navsection}>
         <svg className={styles.svg}>
           <circle
@@ -17,7 +30,7 @@ export default function Menu({ dict, active }) {
           />
         </svg>
         <a
-          href={`#${dict.ideas.title}`}
+          href={links.ideas[homepage]}
           className={
             active === dict.ideas.title ? styles.active : styles.inactive
           }
@@ -39,7 +52,7 @@ export default function Menu({ dict, active }) {
           />
         </svg>
         <a
-          href={`#${dict.experiments.title}`}
+          href={links.experiments[homepage]}
           className={
             active === dict.experiments.title ? styles.active : styles.inactive
           }
@@ -59,7 +72,7 @@ export default function Menu({ dict, active }) {
           />
         </svg>
         <a
-          href={`#${dict.about.title}`}
+          href={links.about[homepage]}
           className={
             active === dict.about.title ? styles.active : styles.inactive
           }

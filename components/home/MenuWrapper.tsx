@@ -12,7 +12,7 @@ const MenuWrapper = ({ dict }) => {
 
   return (
     <>
-      <Menu dict={dict} active={active} />
+      <Menu dict={dict} active={active} homepage={true} />
     </>
   );
 };

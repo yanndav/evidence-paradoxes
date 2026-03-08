@@ -1,9 +1,12 @@
 import styles from "@/app/[lang]/home.module.css";
+import Link from "next/link";
 
 const BoxWrapper = ({ dict, children }) => {
   return (
     <div id={dict.title} className={styles.box}>
-      <h2 className={styles.boxtitle}>{dict.title}</h2>
+      <Link href={dict.link} className={styles.boxtitle}>
+        <h2 className={styles.boxtitle}>{dict.title}</h2>
+      </Link>
       {dict.subtitle && (
         <div className={styles.boxsubtitle}>{dict.subtitle}</div>
       )}

@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./mainwrapper.module.css";
 import NavbarWrapper from "./NavbarWrapper";
-const MainWrapper = ({ children }) => {
+const MainWrapper = async ({ active, dict, children }) => {
   return (
     <div className={styles.mainwrapper}>
-      <NavbarWrapper />
+      <NavbarWrapper dict={dict} active={active} />
       {children}
     </div>
   );

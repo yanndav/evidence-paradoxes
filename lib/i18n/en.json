@@ -1,4 +1,5 @@
 {
+  "lang": "en",
   "title": {
     "complete": "evidence paradoxes",
     "first": "evidence",
@@ -7,14 +8,16 @@
   "hero": "This is the Hero of the website, where I explain its aim. This is the Hero of the website, where I explain its aim",
 
   "ideas": {
+    "link": "/en/ideas",
     "title": "ideas",
     "subtitle": "some notes and essays on challenges and paradoxes on the pathways towards evidence-based decisions."
   },
 
   "experiments": {
+    "link": "/en/experiments",
     "title": "experiments",
     "subtitle": "some tools and methods developped as attempts to tackle one of the challenges presented in this blog."
   },
 
-  "about": { "title": "about", "subtitle": "" }
+  "about": { "title": "about", "subtitle": "", "link": "/en/about" }
 }

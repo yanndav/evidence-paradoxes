@@ -5,6 +5,7 @@ import MenuWrapper from "@/components/home/MenuWrapper";
 import IdeasBox from "@/components/home/IdeasBox";
 import ExperimentsBox from "@/components/home/ExperimentsBox";
 import AboutBox from "@/components/home/AboutBox";
+import Title from "@/components/home/Title";
 
 export default async function Home({
   params,
@@ -19,11 +20,7 @@ export default async function Home({
       <aside className={styles.sidebar}>
         <LanguageSwitcher />
 
-        <h1 className={styles.title}>
-          {dict.title.first}{" "}
-          <span className={styles.paradoxes}> {dict.title.second}</span>{" "}
-        </h1>
-
+        <Title dict={dict} homepage={true} />
         <p className={styles.hero}>{dict.hero}</p>
         <MenuWrapper dict={dict} />
       </aside>

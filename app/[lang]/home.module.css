@@ -41,6 +41,14 @@
   font-weight: 500;
   font-size: 2em;
 }
+
+.titlemain {
+  font-size: 1em !important;
+  /* display: flex;
+  flex-direction: row; */
+  /* flex-wrap: nowrap; */
+  white-space: nowrap;
+}
 .paradoxes {
   font-style: italic;
   font-weight: 400;
@@ -75,6 +83,9 @@
   fill: var(--foreground) !important;
 }
 
+.navmain {
+  flex-direction: row;
+}
 .navsection {
   display: flex;
   flex-direction: row;
@@ -117,6 +128,14 @@
 .boxtitle {
   font-weight: 500;
   margin-bottom: 10px;
+  text-decoration: none;
+}
+.boxtitle:hover {
+  text-decoration: underline;
+}
+
+.boxtitle:visited {
+  color: var(--foreground);
 }
 .boxsubtitle {
   font-weight: 200;
@@ -144,5 +163,8 @@
     top: 0; /* sticks to top when scrolling */
     margin-top: auto; /* starts at bottom of sidebar */
     top: 0;
+  }
+  .navmain {
+    display: none;
   }
 }

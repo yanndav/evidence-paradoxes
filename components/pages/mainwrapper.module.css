@@ -2,16 +2,31 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 40px;
+  gap: 40px;
 }
 
 .navbar {
   position: sticky;
-  top: 0;
+  top: 10px;
   border-radius: 20px;
   background-color: var(--primary);
-  padding: 20px;
+  padding: 10px 20px;
   display: flex;
   flex-direction: row;
-  align-items: stretch;
+  justify-content: space-between;
+  flex-shrink: 9;
+  align-items: center;
+  width: calc(100% - 40px);
+  margin-top: 5px;
+  border-bottom: var(--foreground) solid 1px;
+}
+
+.homelink {
+  text-decoration: none;
+}
+.homelink:hover {
+  cursor: pointer;
+}
+.homelink:visited {
+  color: var(--foreground);
 }
