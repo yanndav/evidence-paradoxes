@@ -1,5 +1,6 @@
 import { compileMDX } from "next-mdx-remote/rsc";
 import { getArticle } from "@/lib/mdx/getArticle";
+import MainWrapper from "@/components/pages/MainWrapper";
 
 export default async function IdeaPage({
   params,
@@ -14,5 +15,9 @@ export default async function IdeaPage({
     source,
   });
 
-  return <article>{content}</article>;
+  return (
+    <MainWrapper>
+      <article>{content}</article>
+    </MainWrapper>
+  );
 }

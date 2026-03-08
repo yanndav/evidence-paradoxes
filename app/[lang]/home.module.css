@@ -108,7 +108,7 @@
   padding: 20px;
   min-height: 2000px;
   border-radius: 20px;
-  background-color: #ffffff;
+  background-color: var(--primary);
   display: flex;
   gap: 0px;
   flex-direction: column;

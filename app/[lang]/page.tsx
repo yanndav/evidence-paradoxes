@@ -1,7 +1,7 @@
 import styles from "./home.module.css";
 import LanguageSwitcher from "@/components/home/LanguageSwitcher";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import Navbar from "@/components/home/Navbar";
+import MenuWrapper from "@/components/home/MenuWrapper";
 import IdeasBox from "@/components/home/IdeasBox";
 import ExperimentsBox from "@/components/home/ExperimentsBox";
 import AboutBox from "@/components/home/AboutBox";
@@ -25,7 +25,7 @@ export default async function Home({
         </h1>
 
         <p className={styles.hero}>{dict.hero}</p>
-        <Navbar dict={dict} />
+        <MenuWrapper dict={dict} />
       </aside>
 
       <section className={styles.content}>

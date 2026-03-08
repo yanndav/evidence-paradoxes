@@ -1,15 +1,8 @@
 "use client";
 
-import { useScrollSpy } from "@/hooks/home/useScrollSpy";
 import styles from "@/app/[lang]/home.module.css";
 
-export default function Navbar({ dict }) {
-  const active = useScrollSpy([
-    dict.ideas.title,
-    dict.experiments.title,
-    dict.about.title,
-  ]);
-
+export default function Menu({ dict, active }) {
   return (
     <div className={styles.navbar}>
       <div className={styles.navsection}>
