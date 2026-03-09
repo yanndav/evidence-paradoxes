@@ -30,7 +30,7 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts",
     "app/[lang]/experiments",
-    "app/[lang]/ideas",
+    "app/[lang]/notes",
     "app/[lang]/about"
   ],
   "exclude": ["node_modules"]

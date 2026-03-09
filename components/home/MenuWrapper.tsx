@@ -5,7 +5,7 @@ import Menu from "./Menu";
 
 const MenuWrapper = ({ dict }) => {
   const active = useScrollSpy([
-    dict.ideas.title,
+    dict.notes.title,
     dict.experiments.title,
     dict.about.title,
   ]);

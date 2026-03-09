@@ -14,14 +14,14 @@ const Ideas = async ({
   const articles = await getArticles(lang);
 
   return (
-    <MainWrapper dict={dict} active={"ideas"}>
+    <MainWrapper dict={dict} active={"notes"}>
       <h1>Idées</h1>
       <div>Ceci est la page par défaut des idées</div>
       <div>
         {articles.map((article) => (
           <div key={article.slug}>
             <h2>
-              <Link href={`/${lang}/ideas/${article.slug}`}>
+              <Link href={`/${lang}/notes/${article.slug}`}>
                 {article.title}
               </Link>
             </h2>

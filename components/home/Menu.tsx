@@ -3,9 +3,9 @@
 import styles from "@/app/[lang]/home.module.css";
 export default function Menu({ dict, active, homepage }) {
   const links = {
-    ideas: {
-      true: `#${dict.ideas.title}`,
-      false: `/${dict.lang}/ideas`,
+    notes: {
+      true: `#${dict.notes.title}`,
+      false: `/${dict.lang}/notes`,
     },
     experiments: {
       true: `#${dict.experiments.title}`,
@@ -13,7 +13,7 @@ export default function Menu({ dict, active, homepage }) {
     },
     about: {
       true: `#${dict.about.title}`,
-      false: `/${dict.lang}/about`,
+      false: `/#${dict.about.title}`,
     },
   };
   return (
@@ -25,17 +25,17 @@ export default function Menu({ dict, active, homepage }) {
             cx="10"
             cy="10"
             className={
-              active === dict.ideas.title ? styles.active : styles.inactive
+              active === dict.notes.title ? styles.active : styles.inactive
             }
           />
         </svg>
         <a
-          href={links.ideas[homepage]}
+          href={links.notes[homepage]}
           className={
-            active === dict.ideas.title ? styles.active : styles.inactive
+            active === dict.notes.title ? styles.active : styles.inactive
           }
         >
-          {dict.ideas.title}
+          {dict.notes.title}
         </a>
       </div>
       <div className={styles.navsection}>

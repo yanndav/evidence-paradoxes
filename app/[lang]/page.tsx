@@ -26,9 +26,9 @@ export default async function Home({
       </aside>
 
       <section className={styles.content}>
-        <IdeasBox dict={dict.ideas} />
+        <IdeasBox dict={dict.notes} />
         <ExperimentsBox dict={dict.experiments} />
-        <AboutBox dict={dict.about} />
+        <AboutBox dict={dict.about} lang={lang} />
       </section>
     </main>
   );

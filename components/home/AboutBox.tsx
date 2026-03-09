@@ -1,11 +1,12 @@
 import styles from "@/app/[lang]/home.module.css";
 import BoxWrapper from "./BoxWrapper";
+const AboutBox = async ({ dict, lang }) => {
+  const module = await import(`@/content/about/${lang}.mdx`);
+  const About = module.default;
 
-const AboutBox = ({ dict }) => {
   return (
     <BoxWrapper dict={dict}>
-      Ceci est la desription de ce blog. Il faudra aussi la traduire en anglais
-      attention
+      <About />
     </BoxWrapper>
   );
 };

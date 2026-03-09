@@ -1,8 +1,8 @@
 import MainWrapper from "@/components/pages/MainWrapper";
-import PostWrapper from "@/components/ideas/PostWrapper";
+import PostWrapper from "@/components/notes/PostWrapper";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import Sections from "@/components/ideas/Sections";
-import styles from "./idea.module.css";
+import Sections from "@/components/notes/Sections";
+import styles from "./notes.module.css";
 
 export default async function IdeaPage({
   params,
@@ -13,13 +13,12 @@ export default async function IdeaPage({
 
   const dict = await getDictionary(lang);
 
-  const article = await import(`@/content/ideas/${slug}/${lang}.mdx`);
+  const article = await import(`@/content/notes/${slug}/${lang}.mdx`);
   const metadata = article.metadata;
   const Post = article.default;
 
-  console.log(metadata);
   return (
-    <MainWrapper dict={dict} active={"ideas"}>
+    <MainWrapper dict={dict} active={"notes"}>
       <Sections metadata={metadata} />
       <PostWrapper>
         <Post />
